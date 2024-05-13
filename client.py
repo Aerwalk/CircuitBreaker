@@ -28,7 +28,7 @@ class RetryClient:
 client = RetryClient(max_retries=10, retry_delay=4)
 
 try:
-    response = client.send_request_with_retry("http://localhost:5000/api")  # Замените на адрес вашего Flask-сервера
+    response = client.send_request_with_retry("http://localhost:5000/api")  
     print("Response:", response.text)
 except Exception as e:
     print("Error:", e)
