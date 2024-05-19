@@ -6,7 +6,9 @@ app = Flask(__name__)
 
 @app.route('/api')
 def api():
-    if random.random() < 0.5:  # Имитация периодической ошибки
+    if random.random() < 0.5:
+        #if random.random() < 0.2: легче показать
+        # Имитация периодической ошибки
         return jsonify({"error": "Server error"}), 500
     else:
         return jsonify({"message": "Success"})
